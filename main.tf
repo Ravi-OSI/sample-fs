@@ -112,7 +112,6 @@ resource "aws_autoscaling_group" "testASG_for_pretia" {
   launch_configuration = "${aws_launch_configuration.testLC_for_pretia.name}"
   min_size             = 2
   max_size             = 4
-  load_balancers       = 
   lifecycle {
     create_before_destroy = true
   }
