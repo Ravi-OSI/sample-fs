@@ -17,7 +17,7 @@ main.tf contains the main code and provisions the below resource
 
 1)	 public and private key pair and registers as aws key_pair to connect to the ec2 which will be provisioned in later steps of the code.
 2)	db instance
-3)	security group in ingress and egress for loadbalancer
+3)	security group with ingress and egress for loadbalancer
 4)	launch configuration for ec2 instances
 5)	auto scaling group to create ec2 instances using the provisioned launch config  
 6)	elastic load balancer backing the created ec2 instances
