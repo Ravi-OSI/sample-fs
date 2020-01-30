@@ -155,4 +155,5 @@ resource "null_resource" "test_dockerfile_for_pretia" {
   }
   provisioner "remote-exec" {
     inline = [ "cd /tmp/docker && docker-compose up -d",]
+ }
 }
