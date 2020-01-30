@@ -9,10 +9,12 @@ A new project has just been confirmed within the company. The requirements for t
 ● Load-balancer 
 ● Auto-scaling
 
-Terraform is used to declare the infra as code in this sample project
-AWS is chosen as cloud provider
+Terraform is used to declare the infra as code in this sample project.
+
+AWS is chosen as cloud provider.
 
 main.tf contains the main code and provisions the below resource
+
 1)	 public and private key pair and registers as aws key_pair to connect to the ec2 which will be provisioned in later steps of the code.
 2)	db instance
 3)	security group in ingress and egress for loadbalancer
