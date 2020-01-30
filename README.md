@@ -30,12 +30,15 @@ Terraform.tfvars contains the variables required
 Application:
 
 test_pretia.sh: A sample app in bash to read and echo the DB user, password, and endpoint from mounted volume.
+
 Dockerfile: copies the app written in bash to the container test directory and uses as entrypoint.
+
 docker-compose.yml: builds the image and mounts the secret.txt file which dynamically created during terraform run and contains the DB username, password and the endpoint to connect to db.
 
 Note: DB user name and password should be encrypted in github secrets by user, which will be passed to terraform main block as environment variable.
 
 CI/CD:
+
 .github/workflows/terraform.yml : using github actions feature, a workflow is created on every push which will trigger the terraform apply command on main.tf.
 
 Note: main.tf will check the sha of the Dockerfile and will trigger the docker build only if the file is modified.
