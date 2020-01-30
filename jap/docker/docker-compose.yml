@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  app:
+    build: .
+    secrets:
+      - secret
+
+secrets:
+  secret:
+    file: secret.txt
